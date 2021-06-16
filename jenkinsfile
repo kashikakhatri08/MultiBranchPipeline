@@ -1,9 +1,9 @@
-pipeline {
+lopipeline {
     agent any
     stages{
         stage("Multibranch_Example"){
             when{
-                branch 'master'
+                branch 'development'
             }
             steps{
                 build 'input_poc'
