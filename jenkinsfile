@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages{
         stage("Multibranch_Example"){
+            when{
+                branch 'development'
+            }
             steps{
                 build 'input_poc'
             }
