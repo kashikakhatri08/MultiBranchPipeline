@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
        stage('Input_block_Example') {
-           build 'input_poc'
+        steps{
+            build 'input_poc'
+                }
             }
         }
     }
