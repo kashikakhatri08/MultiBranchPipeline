@@ -1,4 +1,4 @@
-lopipeline {
+pipeline {
     agent any
     stages{
         stage("Multibranch_Example"){
