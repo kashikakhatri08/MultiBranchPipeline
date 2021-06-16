@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("Multibranch_Example"){
             when{
-                branch 'deployement'
+                branch 'development'
                 changeset '*.java'
             }
             steps{
