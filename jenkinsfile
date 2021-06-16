@@ -9,7 +9,7 @@ pipeline {
             steps{
                 echo "$env.BRANCH_NAME"
                 
-                build ''
+                build 'declarative_syntax_poc'
             }
         }
     }
