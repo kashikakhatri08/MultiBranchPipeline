@@ -6,6 +6,7 @@ pipeline {
                 branch 'development'
             }
             steps{
+                echo "$env.BRANCH_NAME"
                 build 'input_poc'
             }
         }
