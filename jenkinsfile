@@ -1,28 +1,9 @@
 pipeline {
     agent any
-    stages {
-       stage('Input_block_Example') {
-            input {
-                message "Should we continue?"
-                ok "Yes"
-                submitter "john,Anne"
-                submitterParameter "User"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'People', 
-                    description: 'Enter the name')
-                }
-            }
-            steps {
-                echo "Hello, ${PERSON}, nice to meet you."
-                script{
-                def output = input message: "click on yes to continue",ok:"yes",
-                submitter: "john,Anne",
-                parameters: [
-                    string(name: 'Name', defaultValue: 'user', 
-                    description: 'Enter your name')
-                ]
-                echo "Name: ${output}"
-              }
+    stages{
+        stage("Multibranch_Example"){
+            steps{
+                build 'input_poc'
             }
         }
     }
