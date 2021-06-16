@@ -3,13 +3,13 @@ pipeline {
     stages{
         stage("Multibranch_Example"){
             when{
-                
+                branch 'deployement'
                 changeset '*.java'
             }
             steps{
                 echo "$env.BRANCH_NAME"
                 
-                build 'input_poc'
+                build ''
             }
         }
     }
