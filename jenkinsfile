@@ -1,11 +1,12 @@
 pipeline {
     agent any
-    stages {
-       stage('Input_block_Example') {
-        steps{
-            build 'input_poc'
-                }
+    stages{
+        stage("Multibranch_Example"){
+            steps{
+                build 'input_poc'
             }
         }
     }
 }
+   
+
