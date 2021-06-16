@@ -4,7 +4,7 @@ pipeline {
         stage("Multibranch_Example"){
             when{
                 branch 'development'
-                changeset '**/*.java'
+                changeset '*.java'
             }
             steps{
                 echo "$env.BRANCH_NAME"
